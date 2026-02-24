@@ -20,8 +20,6 @@ pub struct C.va_list {}
 pub struct C.rAudioBuffer {}
 pub struct C.rAudioProcessor {}
 
-
-
 // STRUCTS
 // Vector2, 2 componentsVector2
 pub struct C.Vector2 {
