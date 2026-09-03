@@ -23,3 +23,8 @@ bin/
 
 # Ignore installed modules through `v install --local`:
 modules/
+
+build
+build-emscripten
+main.c
+main.wasm.c

@@ -13,7 +13,7 @@ struct MyData {
 	nk &C.nk_context = unsafe {nil}
 }
 
-fn main() {
+pub fn main() {
 	C.SetTargetFPS(60)
 	C.InitWindow(300, 300, &char(c'v factory'))
 
