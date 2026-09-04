@@ -5,7 +5,7 @@ module raylib
 #flag -Ic/raylib/src
 #flag -lraylib
 
-$if emscripten ? {
+$if ems ? {
     #flag emscripten -Lc/prebuilt/emscripten/Release/lib
     #flag -lc
     #flag -sUSE_GLFW=3

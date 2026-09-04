@@ -2,15 +2,15 @@ module main
 
 import raylib
 
-$if emscripten ? {
+$if ems ? {
 	#include <emscripten.h>
 }
 
-@[if emscripten ?]
+@[if ems ?]
 fn C.emscripten_set_main_loop_arg(func fn (voidptr), data voidptr, fps i32, simulate_infinite_loop bool)
 
 struct MyData {
-	nk &C.nk_context = unsafe {nil}
+	nk &C.nk_context = unsafe { nil }
 }
 
 pub fn main() {
@@ -21,7 +21,7 @@ pub fn main() {
 		nk: C.InitNuklear(18)
 	}
 
-	$if emscripten ? {
+	$if ems ? {
 		C.emscripten_set_main_loop_arg(update, voidptr(my_data), 0, 1)
 	} $else {
 		for !C.WindowShouldClose() {
